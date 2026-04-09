@@ -1,0 +1,144 @@
+/* リセット設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    color: #444;
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+/* 1. トップ画像 */
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 2. タイトル & 説明文 */
+.page-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 0.1em;
+}
+
+.description {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* 3. 講師紹介 */
+.instructor-flex {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.instructor-img {
+    flex: 0 0 350px;
+}
+
+.instructor-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px; /* わずかに角を丸めて柔らかく */
+}
+
+.instructor-name {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* 4. コースのご案内 */
+.section-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.table-wrapper {
+    overflow-x: auto; /* スマホで横スクロール可能に */
+}
+
+.course-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.course-table th {
+    background-color: #fcfcfc;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: left;
+    font-weight: normal;
+    color: #888;
+}
+
+.course-table td {
+    padding: 25px 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.course-name {
+    font-weight: bold;
+    color: #333;
+}
+
+/* 5. フッター */
+.footer {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.footer p {
+    font-size: 0.7rem;
+    color: #888;
+}
+
+.footer a {
+    color: #444;
+    text-decoration: none;
+    font-size: 0.7rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 2px;
+}
+
+.footer a:hover {
+    opacity: 0.6;
+}
+
+/* レスポンシブ対応（スマホ表示） */
+@media (max-width: 768px) {
+    .instructor-flex {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .instructor-img {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    .page-title {
+        font-size: 1.6rem;
+    }
+}
