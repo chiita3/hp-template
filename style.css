@@ -1,144 +1,124 @@
-/* リセット設定 */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* --- ベース設定 --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 
 body {
     background-color: #ffffff;
-    color: #444;
-    font-family: 'Noto Sans JP', sans-serif;
-    line-height: 1.8;
+    color: #333;
+    font-family: 'Noto Serif JP', serif;
+    line-height: 2;
     -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.05em;
 }
 
 .container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 80px 20px;
+    padding: 100px 24px;
 }
 
-/* 1. トップ画像 */
-.hero img {
+/* ヘッダー */
+.header {
+    position: fixed;
+    top: 0;
     width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* 2. タイトル & 説明文 */
-.page-title {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 2.2rem;
-    text-align: center;
-    margin-bottom: 40px;
-    letter-spacing: 0.1em;
-}
-
-.description {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-/* 3. 講師紹介 */
-.instructor-flex {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-}
-
-.instructor-img {
-    flex: 0 0 350px;
-}
-
-.instructor-img img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px; /* わずかに角を丸めて柔らかく */
-}
-
-.instructor-name {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
-}
-
-/* 4. コースのご案内 */
-.section-title {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 1.8rem;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.table-wrapper {
-    overflow-x: auto; /* スマホで横スクロール可能に */
-}
-
-.course-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.95rem;
-}
-
-.course-table th {
-    background-color: #fcfcfc;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    padding: 20px;
-    text-align: left;
-    font-weight: normal;
-    color: #888;
-}
-
-.course-table td {
-    padding: 25px 20px;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 100;
     border-bottom: 1px solid #f0f0f0;
 }
-
-.course-name {
-    font-weight: bold;
-    color: #333;
-}
-
-/* 5. フッター */
-.footer {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #fafafa;
-}
-
-.footer p {
-    font-size: 0.7rem;
-    color: #888;
-}
-
-.footer a {
-    color: #444;
+.nav ul { display: flex; justify-content: center; list-style: none; padding: 15px 0; }
+.nav li { margin: 0 15px; }
+.nav a {
     text-decoration: none;
-    font-size: 0.7rem;
-    border-bottom: 1px solid #444;
-    padding-bottom: 2px;
+    color: #666;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
-.footer a:hover {
-    opacity: 0.6;
+/* ヒーロー */
+.hero { margin-top: 50px; }
+.hero img { width: 100%; height: auto; display: block; }
+
+/* 共通タイトル */
+.page-title, .section-title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 0.15em;
+    font-weight: 700;
 }
 
-/* レスポンシブ対応（スマホ表示） */
-@media (max-width: 768px) {
-    .instructor-flex {
-        flex-direction: column;
-        gap: 30px;
-    }
-    .instructor-img {
-        flex: 0 0 auto;
-        width: 100%;
-    }
-    .page-title {
-        font-size: 1.6rem;
-    }
+/* 理念 & Messageの本文 */
+.description {
+    text-align: center; 
+}
+
+/* アカシックについて */
+.about-section { background-color: #fcfcfc; text-align: center; }
+.benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+.benefit-item {
+    text-align: center; 
+}
+.benefit-item h3 { font-size: 1.2rem; margin-bottom: 15px; border-bottom: 1px solid #eee; display: inline-block; padding-bottom: 5px; }
+.benefit-item p { font-size: 0.95rem; color: #666; text-align: center; } /* 本文も中央寄せ */
+
+/* 講師紹介 */
+.instructor-flex { display: flex; align-items: flex-start; gap: 60px; }
+.instructor-img { flex: 0 0 380px; }
+.instructor-img img { width: 100%; height: auto; border-radius: 2px; }
+.instructor-name { font-size: 1.8rem; margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+
+/* セッション案内 */
+.course-table { width: 100%; border-collapse: collapse; margin-bottom: 60px; }
+.course-table th { background: #f9f9f9; padding: 20px; border-bottom: 2px solid #333; text-align: left; font-size: 0.9rem; color: #888; }
+.course-table td { padding: 25px 20px; border-bottom: 1px solid #eee; }
+.course-name { font-weight: bold; }
+
+/* ポリシー  */
+.policy-block {
+    background-color: #f0f7ff; 
+    border: 2px solid #d0e4ff; 
+    padding: 40px;
+    font-size: 0.9rem;
+    color: #444;
+}
+.policy-block h3 { margin-bottom: 20px; color: #333; }
+.policy-block ul { list-style: none; max-width: 800px; margin: 0 auto; }
+.policy-block li { margin-bottom: 10px; position: relative; padding-left: 20px; text-align: left; }
+.policy-block li::before { content: "・"; position: absolute; left: 0; }
+
+/* クロージング */
+.closing-section { text-align: center; background-color: transparent; } /* 背景色を不要に */
+.contact-area { margin-top: 60px; }
+
+/* 連絡先の枠 */
+.contact-box {
+    background-color: #f0f7ff;
+    border: 2px solid #d0e4ff;
+    padding: 60px 40px;
+    display: inline-block;
+    width: 100%;
+    max-width: 800px;
+}
+.contact-label { font-size: 1.0rem; color: #333; margin-bottom: 15px; font-weight: bold; }
+.email-address { font-size: 1.0rem; font-weight: bold; letter-spacing: 0.05em; margin-bottom: 15px; color: #000; }
+.contact-note { font-size: 0.85rem; color: #666; }
+
+/* フッター */
+.footer { padding: 20px; text-align: center; background-color: #fafafa; }
+.footer p { font-size: 0.7rem; color: #666; margin: 0; line-height: 1;}
+.footer a { display: inline-block; margin-top: 2px; line-height: 1; color: #666; text-decoration: none; font-size: 0.7rem; border-bottom: 1px solid #333; }
+
+/* レスポンシブ */
+@media (max-width: 850px) {
+    .instructor-flex { flex-direction: column; }
+    .instructor-img { width: 100%; margin-bottom: 20px; }
+    .page-title { font-size: 1.6rem; }
+    .contact-box { padding: 40px 20px; }
 }

@@ -3,69 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HPタイトルをここに入力</title>
+    <title>アカシックリーディング・セッション</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="hero">
-        <img src="images/Top-sample.png" alt="TOP画像"> </div>
+    <header class="header">
+        <nav class="nav">
+            <ul>
+                <li><a href="#concept">Concept</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#instructor">Profile</a></li>
+                <li><a href="#course">Session</a></li>
+                <li><a href="#closing">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section class="intro container">
-        <h1 class="page-title">ホームページのタイトル</h1>
+    <div class="hero">
+        <img src="images/Top-sample.png" alt="メインビジュアル">
+    </div>
+
+    <section id="concept" class="intro container">
+        <h1 class="page-title">宇宙の記憶に触れ、<br>本来のあなたを思い出す。</h1>
         <div class="description">
-            <p>ここにはサイトの説明文が入ります。</p>
-            <p>どのような内容かを説明してください。行数の指定はありません。</p>
+            <p>私たちは皆、独自の魂の旅を続けています。<br>
+            日常の迷いや違和感は、あなたが本来の道から少しだけ逸れているサインかもしれません。</p>
+            <p>アカシックリーディングは、宇宙のデータバンクにアクセスし、<br>
+            あなたの過去・現在・未来の可能性を紐解くプロセスです。<br>
+            答えは常にあなたの中にあります。私はその扉を開くお手伝いをいたします。</p>
         </div>
     </section>
 
-    <section class="instructor-section container">
-        <div class="instructor-flex">
-            <div class="instructor-img">
-                <img src="images/Person_sample.png" alt="講師画像"> </div>
-            <div class="instructor-info">
-                <h2 class="instructor-name">氏名</h2>
-                <div class="instructor-profile">
-                    <p>ここには紹介文が入ります。これまでの活動実績などを記述してください。</p>
-                    <p>左側には宣材写真をいれます。画像はサンプルのため後姿にしています。</p>
+    <section id="about" class="about-section container">
+        <h2 class="section-title">Akashic Reading</h2>
+        <div class="about-content">
+            <p>アカシックレコードとは、宇宙誕生からのすべての出来事、思考、感情が記録されている<br>
+                「宇宙の図書館」のような場所です。</p>
+            <div class="benefit-grid">
+                <div class="benefit-item">
+                    <h3>魂の目的を知る</h3>
+                    <p>今世で何を成し遂げたいのか、<br>
+                        魂が望む方向性を明確にします。</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>繰り返すパターンの解消</h3>
+                    <p>なぜか繰り返してしまう悩みや<br>
+                        人間関係の癖の根本原因を探ります。</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>現在地の肯定</h3>
+                    <p>起きている出来事の意味を深く理解し、<br>
+                        安心感の中で次の一歩を踏み出せます。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="course-section container">
-        <h2 class="section-title">コースのご案内</h2>
+    <section id="instructor" class="instructor-section container">
+        <div class="instructor-flex">
+            <div class="instructor-img">
+                <img src="images/Person_sample.png" alt="アカシックリーダー">
+            </div>
+            <div class="instructor-info">
+                <h2 class="instructor-name">名前</h2>
+                <div class="instructor-profile">
+                    <p>幼少期より目に見えない世界の理に触れ、自己探求の末にアカシックレコードの叡智に出会う。</p>
+                    <p>現在は「自分自身の中心に戻るための対話」を大切に、年間◯◯名以上のアカシックリーディング・セッションを提供。論理的な視点と直感的なメッセージを統合したセッションに定評がある。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="course" class="course-section container">
+        <h2 class="section-title">Session Menu</h2>
         <div class="table-wrapper">
             <table class="course-table">
                 <thead>
                     <tr>
-                        <th>コースタイトル</th>
-                        <th>内容</th>
-                        <th>日付</th>
-                        <th>時間</th>
-                        <th>料金</th>
+                        <th>Menu</th>
+                        <th>Time</th>
+                        <th>Price</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="course-name">基礎コース</td>
-                        <td>○○の基礎を学ぶ初級クラス。</td>
-                        <td>XXXX年X月XX日</td>
-                        <td>00:00 - 00:00</td>
+                        <td class="course-name">個人セッション</td>
+                        <td>30分</td>
                         <td>¥00,000</td>
                     </tr>
                     <tr>
-                        <td class="course-name">応用コース</td>
-                        <td>より深く、実践を学ぶ上級クラス。</td>
-                        <td>XXXX年X月XX日</td>
-                        <td>00:00 - 00:00</td>
+                        <td class="course-name">個人セッション</td>
+                        <td>60分</td>
+                        <td>¥00,000</td>
+                    </tr>
+                    <tr>
+                        <td class="course-name">延長</td>
+                        <td>30分ごと</td>
                         <td>¥00,000</td>
                     </tr>
                 </tbody>
             </table>
         </div>
+
+        <div class="policy-block">
+            <h3>Rules & Policy</h3>
+            <ul>
+                <li>完全予約制です。お支払いは事前のお振込、またはクレジットカードにて承ります。</li>
+                <li>ご予約時間の24時間前を過ぎてからのキャンセルは、料金の100%を頂戴いたします。</li>
+                <li>セッションはZoomを用いたオンライン、または都内近郊のラウンジにて承ります。</li>
+                <li>精神疾患で通院中の方、または処方薬を服用中の方は、専門医の判断を優先してください。</li>
+            </ul>
+        </div>
     </section>
+
+<section class="closing-section container">
+    <div class="closing-message">
+        <h2 class="section-title">Message</h2>
+        <div class="description"> <p>あなたがこのページに辿り着いたのは、魂が「変化の時」を告げているからかもしれません。<br>
+            情報に溺れる日常から少し離れ、あなたの静かな本質に触れる時間をご一緒しましょう。<br>
+            お会いできることを楽しみにしています。</p>
+        </div>
+    </div>
+
+    <div id="closing" class="contact-area">
+        <h2 class="section-title">Contact</h2> <div class="contact-box">
+            <p class="contact-label">セッションのお申し込みやお問い合わせは下記メールまで。</p>
+            <p class="email-address">yourname@example.com</p>
+            <p class="contact-note">※お名前、希望日時（第3希望まで）、セッション時間を明記の上ご連絡ください。</p>
+        </div>
+    </div>
+</section>
 
     <footer class="footer">
         <p>＜UCO’s partner＞</p>
